@@ -1,5 +1,6 @@
 import React from "react";
 import MovieRow from "./Components/Movie_row.jsx";
+import { Navigation_baar } from "./Components/navigation-bar/Navigation_baar.jsx";
 
 const movies = [
   {
@@ -31,6 +32,7 @@ const movies = [
 function App() {
   return (
     <div className="bg-gray-900 min-h-screen p-8">
+      <Navigation_baar />
       <MovieRow title="Trending Movies" movies={movies} />
       <MovieRow title="Latest Release" movies={movies} />
       <MovieRow title="Coming Soon" movies={movies} />
