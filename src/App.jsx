@@ -1,6 +1,7 @@
 import React from "react";
 import MovieRow from "./Components/Movie_row.jsx";
 import { Navigation_baar } from "./Components/navigation-bar/Navigation_baar.jsx";
+import { Footer } from "./Components/footer/Footer.jsx";
 
 const movies = [
   {
@@ -36,6 +37,7 @@ function App() {
       <MovieRow title="Trending Movies" movies={movies} />
       <MovieRow title="Latest Release" movies={movies} />
       <MovieRow title="Coming Soon" movies={movies} />
+      <Footer />
     </div>
   );
 }
