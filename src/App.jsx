@@ -34,8 +34,7 @@ function App() {
     <div className="bg-gray-900 min-h-screen p-8">
       <Navigation_baar />
       <MovieRow title="Trending Movies" movies={movies} />
-      <MovieRow title="Latest Release" movies={movies} />
-      <MovieRow title="Coming Soon" movies={movies} />
+
     </div>
   );
 }
