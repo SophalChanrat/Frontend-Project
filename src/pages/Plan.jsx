@@ -4,7 +4,7 @@ import { Nav_setting } from "../Components/navigation-bar/Nav_setting";
 import { Footer } from "../Components/footer/Footer";
 import { Plan_card } from "../Components/plan/Plan_card";
 import { FaGift, FaGem } from 'react-icons/fa';
-import { usePlan } from "../Components/plan/PlanProvider";
+import { usePlan } from "../Components/context/PlanProvider";
 
 
 export const Plan = () => {

@@ -6,14 +6,18 @@ import { Footer } from '../Components/footer/Footer'
 import { Setting_pf} from '../Components/setting/Setting_pf'
 import { Setting_btn} from '../Components/setting/setting_btn'
 import { Change_info_popup } from '../Components/setting/Change_info_popup'
+import { useUser } from '../Components/context/UserProvider.jsx'
+import { useNavigate } from 'react-router-dom';
 
 export const Setting = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const { user, logoutUser } = useUser();
+  const navigate = useNavigate();
   return (
     <div>
         <Nav_setting />
         <div className="setting_body">
-          <Setting_pf userName={"John Doe"} email={"xHt6U@example.com"}/>
+          <Setting_pf userName={user.username}/>
           <Setting_btn name={"Change information"} onClick={() => setShowPopup(true)}/>
           <Change_info_popup isOpen={showPopup} onClose={() => setShowPopup(false)} />
           <Link to="/plan" style={{width: "100%", display: 'flex', justifyContent: 'center' }}>
@@ -29,7 +33,7 @@ export const Setting = () => {
             </button>
           </Link>
           
-          <Setting_btn name={"Logout"}/>
+          <Setting_btn name={"Logout"} onClick={() => {logoutUser(); navigate("/");}}/>
         </div>
         <Footer />
     </div>

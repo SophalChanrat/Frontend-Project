@@ -86,6 +86,30 @@
     background-color: #444;
     color: #bbb;
   }
+  .auth-buttons{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+  }
+  .login-btn,
+  .signup-btn{
+        border: none;
+        width: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        align-items: center;
+        text-align: center;
+  }
+    .login-btn{
+        background-color: red;
+        color: white;
+    }
+    .signup-btn{
+        background-color: white;
+        color: red;
+    }
 @media screen and (max-width: 768px) {
 
     .toggle-container {
@@ -109,13 +133,23 @@
     .container-profile span {
         display: none;
     }
+    .auth-buttons {
+        gap: 5px;
+      }
+    
+      .login-btn,
+      .signup-btn {
+        width: 80px;
+        padding: 8px;
+        font-size: 13px;
+      }
 }
 @media screen and (max-width: 480px) {
     .container{
         flex-direction: column;
     }
     .logo img{
-        width: 100px;
+        width: 120px;
         height: 70px;
     }
     .container-profile{
@@ -144,9 +178,24 @@
     .container-profile span {
         display: none;
     }
-    .container span{
+    #back{
         position: absolute;
         top: 25px;
         left: 10px;
     }
+    .auth-buttons {
+        flex-direction: column;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    
+      .login-btn,
+      .signup-btn {
+        width: 100px;
+        padding: 6px;
+        font-size: 12px;
+      }
 }

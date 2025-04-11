@@ -2,7 +2,7 @@ import React from 'react'
 import profile from "../../assets/react.svg"
 import "./setting.css"
 
-export const Setting_pf = ({userName, email}) => {
+export const Setting_pf = ({userName}) => {
   return (
     <div className='setting_pf_container'>
         <div className="profile-top">
@@ -14,7 +14,6 @@ export const Setting_pf = ({userName, email}) => {
         
         <div className="pf_detail">
             <p>{userName}</p>
-            <p>{email}</p>
         </div>
 
     </div>
