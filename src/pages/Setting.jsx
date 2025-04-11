@@ -22,7 +22,13 @@ export const Setting = () => {
               <span class="material-symbols-outlined">open_in_new</span>
             </button>
           </Link>
-          <Setting_btn name={"Change Theme"}/>
+          <Link to="/watchList" style={{width: "100%", display: 'flex', justifyContent: 'center' }}>
+            <button className='setting_btn_container'>
+              Watch List
+              <span class="material-symbols-outlined">open_in_new</span>
+            </button>
+          </Link>
+          
           <Setting_btn name={"Logout"}/>
         </div>
         <Footer />
