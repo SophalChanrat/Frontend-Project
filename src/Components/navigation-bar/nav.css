@@ -3,8 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:#1E1E1E;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
+.container span{
+    margin: 0 20px;
+    color: #fff;
+    cursor: pointer;
+}
 
 .container-profile{
     display: flex;
@@ -78,3 +86,67 @@
     background-color: #444;
     color: #bbb;
   }
+@media screen and (max-width: 768px) {
+
+    .toggle-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    .logo img{
+        width: 200px;
+        height: 80px;
+    }
+
+    .toggle-btn {
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px;
+    }
+    .detail{
+        display: none;
+    }
+    .container-profile span {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container{
+        flex-direction: column;
+    }
+    .logo img{
+        width: 100px;
+        height: 70px;
+    }
+    .container-profile{
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+    .pic-profile {
+        width: 35px;
+        height: 35px;
+    }
+    .toggle-container {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .toggle-btn {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .detail{
+        display: none;
+    }
+    .container-profile span {
+        display: none;
+    }
+    .container span{
+        position: absolute;
+        top: 25px;
+        left: 10px;
+    }
+}
