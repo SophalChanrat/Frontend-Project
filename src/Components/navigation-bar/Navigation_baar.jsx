@@ -14,9 +14,9 @@ export const Navigation_baar = ({userName}) => {
 
   return (
     <div className='container'>
-        <div className='logo'>
+        <Link className='logo' to='/'>
             <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <ToggleButton />
         <div className='nav-profile'>
           {user ? (

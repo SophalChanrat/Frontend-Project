@@ -21,6 +21,7 @@ function App() {
           <Route path="/login" element={<LoginPg />} />
           <Route path="/signup" element={<SignupPg />} />
           <Route path="/watchlist" element={<WatchList />} />
+          <Route path="trending" element={<Home />} />
         </Routes>
       </UserProvider>
     </PlanProvider>

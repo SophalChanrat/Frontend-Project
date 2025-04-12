@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../../assets/logo.png"
-import  {useNavigate} from 'react-router-dom'
+import  {Link, useNavigate} from 'react-router-dom'
 import "./nav.css"
 import { Profile } from './Profile'
 import { usePlan } from '../context/PlanProvider'
@@ -14,9 +14,9 @@ export const Nav_setting = () => {
   return (
     <div className='container'>
         <span id='back' class="material-symbols-outlined" onClick={() => navigate(-1)}>arrow_back_ios</span>
-        <div className='logo'>
+        <Link className='logo' to='/'>
             <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <div>
           <Profile userName={user.username} plan={plan}/>
         </div>

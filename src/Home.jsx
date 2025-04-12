@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import { Navigation_baar } from './Components/navigation-bar/Navigation_baar'
 import { Footer } from './Components/footer/Footer'
 import { SignUp } from './Components/SignUp'
@@ -26,10 +27,13 @@ export const Home = () => {
     { id: 10, title: "Nemo", rating: 7.3, year: 2014, image: Nemo },
   ];
   return (
-    <div>
+    <div className="home-container">
         <Navigation_baar />
         <CategoryChooser />
-        <Movie_row title="Trending" movies={trendingMovies} />
+        <div className="main-content">
+          <Movie_row title="Trending" movies={trendingMovies} />
+          <Movie_row title="Action" movies={trendingMovies} />
+        </div>
         <Footer />
     </div>
   );

@@ -8,6 +8,7 @@ import { Setting_btn} from '../Components/setting/setting_btn'
 import { Change_info_popup } from '../Components/setting/Change_info_popup'
 import { useUser } from '../Components/context/UserProvider.jsx'
 import { useNavigate } from 'react-router-dom';
+import { TbBackground } from 'react-icons/tb';
 
 export const Setting = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -33,7 +34,7 @@ export const Setting = () => {
             </button>
           </Link>
           
-          <Setting_btn name={"Logout"} onClick={() => {logoutUser(); navigate("/");}}/>
+          <Setting_btn name={"Logout"} onClick={() => {logoutUser(); navigate("/");}} style={{ backgroundColor: 'red'}}/>
         </div>
         <Footer />
     </div>

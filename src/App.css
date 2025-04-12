@@ -131,8 +131,22 @@
 .category-button:hover {
   background: #ff596f;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .category-button.active {
   background: #E50914;
   color: white;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
 }
