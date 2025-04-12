@@ -1,42 +1,30 @@
 import React from "react";
-import MovieRow from "./Components/Movie_row.jsx";
-import { Navigation_baar } from "./Components/navigation-bar/Navigation_baar.jsx";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home.jsx";
+import Setting from "./pages/Setting.jsx";
+import {Plan} from "./pages/Plan.jsx"
+import { PlanProvider } from "./Components/context/PlanProvider.jsx";
+import { UserProvider } from "./Components/context/UserProvider.jsx";
+import { LoginPg } from "./pages/LoginPg.jsx";
+import { SignupPg } from "./pages/SignupPg.jsx";
+import { WatchList } from "./pages/WatchList.jsx";
 
-const movies = [
-  {
-    id: 1,
-    name: "Violet Evergarden",
-    poster: "",
-    rating: "8.5",
-  },
-  {
-    id: 2,
-    name: "Ponyo",
-    poster: "",
-    rating: "7.8",
-  },
-  {
-    id: 3,
-    name: "Suzume",
-    poster: "",
-    rating: "8.2",
-  },
-  {
-    id: 4,
-    name: "Black Clover",
-    poster: "",
-    rating: "8.0",
-  },
-];
 
 function App() {
   return (
-    <div className="bg-gray-900 min-h-screen p-8">
-      <Navigation_baar />
-      <MovieRow title="Trending Movies" movies={movies} />
-      <MovieRow title="Latest Release" movies={movies} />
-      <MovieRow title="Coming Soon" movies={movies} />
-    </div>
+    <PlanProvider>
+      <UserProvider>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path ="/setting" element={<Setting />}/>
+          <Route path="/plan" element={<Plan />} />
+          <Route path="/login" element={<LoginPg />} />
+          <Route path="/signup" element={<SignupPg />} />
+          <Route path="/watchlist" element={<WatchList />} />
+        </Routes>
+      </UserProvider>
+    </PlanProvider>
+
   );
 }
 

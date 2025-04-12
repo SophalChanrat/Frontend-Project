@@ -1,32 +1,105 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
+"use client";
+
+import { useRef } from "react";
 import "../Movie_row.css";
 
+export function Movie_row({ title, movies }) {
+  const scrollContainerRef = useRef(null);
 
-const MovieRow = ({ title, movies }) => {
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const scrollAmount = 300;
+      container.scrollTo({
+        left: container.scrollLeft + scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const scrollAmount = 300;
+      container.scrollTo({
+        left: container.scrollLeft - scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="mb-8">
-      <h2 className="text-white text-2xl font-semibold mb-4">{title}</h2>
-      <div className="flex overflow-x-scroll scrollbar-hide space-x-4">
-        {movies.map((movie) => (
-          <div
-            key={movie.id}
-            className="min-w-[150px] md:min-w-[180px] lg:min-w-[200px] relative"
-          >
-            <img
-              src={movie.poster}
-              alt={movie.name}
-              className="rounded-lg w-full object-cover"
-            />
-            <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 rounded flex items-center space-x-1">
-              <FaStar className="text-yellow-400" />
-              <span className="text-sm">{movie.rating}</span>
+    <div className="trending-container">
+      <h1 className="trending-title">{title}</h1>
+
+      <div className="movie-slider-container">
+        <div ref={scrollContainerRef} className="movie-slider">
+          {movies.map((movie) => (
+            <div key={movie.id} className="movie-card">
+              <div className="movie-poster">
+                <img
+                  src={movie.image || "/placeholder.svg"}
+                  alt={movie.title}
+                  className="poster-image"
+                />
+              </div>
+              <h3 className="movie-title">{movie.title}</h3>
+              <div className="movie-rating">
+                <span className="star">★</span>
+                <span className="rating-text">
+                  {movie.rating} | {movie.year}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <button
+          onClick={scrollLeft}
+          className="scroll-button scroll-left"
+          aria-label="Scroll left"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button
+          onClick={scrollRight}
+          className="scroll-button scroll-right"
+          aria-label="Scroll right"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
-};
+}
 
-export default MovieRow;
+export default Movie_row;
