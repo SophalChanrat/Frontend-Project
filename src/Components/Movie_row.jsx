@@ -3,7 +3,11 @@
 import { useRef } from "react";
 import "../Movie_row.css";
 
+<<<<<<< HEAD
 function Movie_row({ title, movies }) {
+=======
+export function Movie_row({ title, movies }) {
+>>>>>>> fd1ce23ab39ecacce4292ab6535c55beee05a098
   const scrollContainerRef = useRef(null);
 
   const scrollRight = () => {
