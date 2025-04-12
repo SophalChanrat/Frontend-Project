@@ -15,7 +15,14 @@ export const UserProvider = ({ children }) => {
     setUser(newUser);
     localStorage.setItem("loggedInUser", JSON.stringify(newUser)); // Save updated user to localStorage
   };
-
+  const addToWatchlist = (movie) => {
+    if (!user) return false; // User not logged in
+    const updatedWatchlist = [...watchlist, movie];
+    setWatchlist(updatedWatchlist);
+    const updatedUser = { ...user, watchlist: updatedWatchlist };
+    updateUser(updatedUser);
+    return true;
+  };
   const logoutUser = () => {
     localStorage.removeItem("loggedInUser"); // Remove user from localStorage
     setUser(null); // Clear user state

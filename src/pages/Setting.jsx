@@ -26,7 +26,7 @@ export const Setting = () => {
               <span class="material-symbols-outlined">open_in_new</span>
             </button>
           </Link>
-          <Link to="/watchList" style={{width: "100%", display: 'flex', justifyContent: 'center' }}>
+          <Link to="/watchlist" style={{width: "100%", display: 'flex', justifyContent: 'center' }}>
             <button className='setting_btn_container'>
               Watch List
               <span class="material-symbols-outlined">open_in_new</span>

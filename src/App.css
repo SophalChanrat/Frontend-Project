@@ -102,3 +102,37 @@
   font-size: 14px;
   margin-top: 10px;
 }
+.category-list{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.category-button{
+  background-color: #2A2A2A;
+  align-items: center;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.category-list img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  filter: brightness(0) invert(1);
+}
+.category-button:hover {
+  background: #ff596f;
+}
+
+.category-button.active {
+  background: #E50914;
+  color: white;
+}
