@@ -31,6 +31,18 @@ import theboys from "../assets/actionSeries/the_boys.jpg";
 import thenightagent from "../assets/actionSeries/the_night_agent.jpg";
 import theterminallist from "../assets/actionSeries/the_terminal_list.jpg";
 import wandavision from "../assets/actionSeries/wandavision.jpg"
+import walk from "../assets/walk.jpg";
+import Sunrise from "../assets/sunrise.jpg";
+import La from "../assets/La.jpg";
+import meb4u from "../assets/Meb4u.jpg";
+import Star from "../assets/Star.jpg";
+import romeo from "../assets/Romeo.webp";
+import Bdton from "../assets/BDTON.jpg";
+import crash from "../assets/Crash.webp";
+import Crazy from "../assets/Crazy.jpg";
+import Emily from "../assets/Emily.webp";
+import Heart from "../assets/Heart.jpg";
+import Summer from "../assets/Summer.webp";
 
 
 export const movieDetails = {
@@ -372,4 +384,176 @@ export const movieDetails = {
         thumbnail: wandavision,
         image: wandavision
     }
+];
+export const romanceMovies = [
+  {
+      id: 'romance-1',
+      title: "Walk",
+      description: "A romantic journey of two strangers who meet by chance and embark on a walking adventure through a beautiful city.",
+      genre: "Romance, Drama",
+      year: 2025,
+      duration: "2h 5m",
+      starring: "Emma Stone, Ryan Gosling",
+      director: "Richard Linklater",
+      rating: 7.1,
+      backgroundImage: walk,
+      thumbnail: walk,
+      image: walk
+  },
+  {
+      id: 'romance-2',
+      title: "Sunrise",
+      description: "A touching love story that unfolds during a single sunrise, as two people discover their true feelings.",
+      genre: "Romance",
+      year: 2024,
+      duration: "1h 55m",
+      starring: "Timothée Chalamet, Zendaya",
+      director: "Sofia Coppola",
+      rating: 7.6,
+      backgroundImage: Sunrise,
+      thumbnail: Sunrise,
+      image: Sunrise
+  },
+  {
+      id: 'romance-3',
+      title: "La",
+      description: "A musical romance set in Los Angeles, where two artists fall in love while pursuing their dreams.",
+      genre: "Romance, Musical",
+      year: 2024,
+      duration: "2h 8m",
+      starring: "Emma Watson, Miles Teller",
+      director: "Damien Chazelle",
+      rating: 7.5,
+      backgroundImage: La,
+      thumbnail: La,
+      image: La
+  },
+  {
+      id: 'romance-4',
+      title: "Meb4u",
+      description: "A modern love story about finding your soulmate through a mysterious dating app.",
+      genre: "Romance, Comedy",
+      year: 2014,
+      duration: "1h 45m",
+      starring: "Jennifer Lawrence, Michael B. Jordan",
+      director: "Nancy Meyers",
+      rating: 7.3,
+      backgroundImage: meb4u,
+      thumbnail: meb4u,
+      image: meb4u
+  },
+  {
+      id: 'romance-5',
+      title: "Star",
+      description: "Two aspiring astronomers find love while studying the stars and pursuing their scientific dreams.",
+      genre: "Romance, Drama",
+      year: 2021,
+      duration: "2h 15m",
+      starring: "Tom Holland, Zendaya",
+      director: "James Gray",
+      rating: 9.0,
+      backgroundImage: Star,
+      thumbnail: Star,
+      image: Star
+  },
+  {
+      id: 'romance-6',
+      title: "Romeo",
+      description: "A modern retelling of Shakespeare's classic love story set in contemporary times.",
+      genre: "Romance, Drama",
+      year: 2015,
+      duration: "2h 10m",
+      starring: "Ansel Elgort, Rachel Zegler",
+      director: "Baz Luhrmann",
+      rating: 6.0,
+      backgroundImage: romeo,
+      thumbnail: romeo,
+      image: romeo
+  }
+];
+export const romanceSeries = [
+  {
+      id: 'rseries-1',
+      title: "Bridgerton",
+      description: "During the Regency era in England, eight close-knit siblings of the powerful Bridgerton family attempt to find love.",
+      genre: "Drama, Romance",
+      year: 2025,
+      duration: "2 Seasons",
+      starring: "Phoebe Dynevor, Regé-Jean Page",
+      director: "Chris Van Dusen",
+      rating: 7.1,
+      backgroundImage: Bdton,
+      thumbnail: Bdton,
+      image: Bdton
+  },
+  {
+      id: 'rseries-2',
+      title: "Crash Landing on You",
+      description: "A South Korean heiress crash-lands in North Korea and falls in love with an army officer who decides to help her hide.",
+      genre: "Romance, Drama",
+      year: 2024,
+      duration: "1 Season",
+      starring: "Hyun Bin, Son Ye-jin",
+      director: "Lee Jung-hyo",
+      rating: 7.6,
+      backgroundImage: crash,
+      thumbnail: crash,
+      image: crash
+  },
+  {
+      id: 'rseries-3',
+      title: "Crazy Rich Asians",
+      description: "A Chinese-American professor travels to meet her boyfriend's family and is surprised to discover they are among the richest in Singapore.",
+      genre: "Romance, Comedy",
+      year: 2024,
+      duration: "1 Season",
+      starring: "Constance Wu, Henry Golding",
+      director: "Jon M. Chu",
+      rating: 7.5,
+      backgroundImage: Crazy,
+      thumbnail: Crazy,
+      image: Crazy
+  },
+  {
+      id: 'rseries-4',
+      title: "Emily in Paris",
+      description: "An American marketing executive lands her dream job in Paris, navigating career challenges, friendships, and romance.",
+      genre: "Comedy, Drama, Romance",
+      year: 2014,
+      duration: "3 Seasons",
+      starring: "Lily Collins, Philippine Leroy-Beaulieu",
+      director: "Darren Star",
+      rating: 7.3,
+      backgroundImage: Emily,
+      thumbnail: Emily,
+      image: Emily
+  },
+  {
+      id: 'rseries-5',
+      title: "Heartstopper",
+      description: "Two British teens, Nick and Charlie, navigate school, love, and friendship in this heartwarming LGBTQ+ series.",
+      genre: "Romance, Drama",
+      year: 2021,
+      duration: "2 Seasons",
+      starring: "Kit Connor, Joe Locke",
+      director: "Alice Oseman",
+      rating: 9.0,
+      backgroundImage: Heart,
+      thumbnail: Heart,
+      image: Heart
+  },
+  {
+      id: 'rseries-6',
+      title: "The Summer I Turned Pretty",
+      description: "A teenage girl's life changes as she experiences first love, heartbreak, and self-discovery during her summer vacation.",
+      genre: "Drama, Romance",
+      year: 2015,
+      duration: "2 Seasons",
+      starring: "Lola Tung, Christopher Briney",
+      director: "Jenny Han",
+      rating: 6.0,
+      backgroundImage: Summer,
+      thumbnail: Summer,
+      image: Summer
+  }
 ];

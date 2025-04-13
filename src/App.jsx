@@ -10,6 +10,8 @@ import { SignupPg } from "./pages/SignupPg.jsx";
 import { WatchList } from "./pages/WatchList.jsx";
 import { ActionPage } from "./pages/ActionPage.jsx";
 import { ActionSeries } from "./pages/ActionSeries.jsx";
+import RomancePage from "./pages/RomancePage.jsx";
+import { RomanceSeries } from "./pages/RomanceSeries.jsx";
 import MovieDetails from "./Components/Watch_movie.jsx";
 
 
@@ -26,7 +28,9 @@ function App() {
           <Route path="/watchlist" element={<WatchList />} />
           <Route path="/action" element={<ActionPage />} />
           <Route path="/action/series" element={<ActionSeries />} />
+          <Route path="/romance" element={<RomancePage />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/romance/series" element={<RomanceSeries />} />
           {/* Add more routes as needed */}
         </Routes>
       </UserProvider>
