@@ -15,21 +15,34 @@ export default function MovieDetails() {
 
   // State to control movie player visibility
   const [showPlayer, setShowPlayer] = useState(false);
-  // State to store the current video ID
-  const [currentVideoId, setCurrentVideoId] = useState('');
-  // State to store the video title
-  const [videoTitle, setVideoTitle] = useState('');
+  // State to store video type (movie or trailer)
+  const [videoType, setVideoType] = useState('movie'); // 'movie' or 'trailer'
 
   // Get visible movies for the carousel
-  const visibleMovies = allMovies.slice(currentIndex, currentIndex + itemsPerPage);
+  const getVisibleMovies = () => {
+    // Handle edge case where there are fewer items than itemsPerPage
+    if (allMovies.length <= itemsPerPage) {
+      return allMovies;
+    }
+    
+    // Ensure currentIndex doesn't exceed valid bounds
+    const maxStartIndex = Math.max(0, allMovies.length - itemsPerPage);
+    const safeIndex = Math.min(currentIndex, maxStartIndex);
+    
+    return allMovies.slice(safeIndex, safeIndex + itemsPerPage);
+  };
+
+  const visibleMovies = getVisibleMovies();
 
   const nextSlide = () => {
-    setHasNavigated(true);
-    setCurrentIndex((prevIndex) =>
-      prevIndex + itemsPerPage >= allMovies.length
-        ? 0
-        : prevIndex + itemsPerPage
-    );
+    // Only navigate if there are more items to show
+    if (currentIndex + itemsPerPage < allMovies.length) {
+      setHasNavigated(true);
+      setCurrentIndex((prevIndex) => prevIndex + itemsPerPage);
+    } else {
+      // Wrap around to the beginning
+      setCurrentIndex(0);
+    }
   };
 
   const prevSlide = () => {
@@ -67,17 +80,13 @@ export default function MovieDetails() {
 
   // Function to handle watch button click
   const handleWatchClick = () => {
-    // Set the video ID for the full movie (assuming it's stored in featuredMovie)
-    setCurrentVideoId(featuredMovie.videoId || "osYpGSz_0i4"); // Default if not available
-    setVideoTitle(`${featuredMovie.title}`);
+    setVideoType('movie');
     setShowPlayer(true);
   };
 
   // Function to handle trailer button click
   const handleTrailerClick = () => {
-    // Set the video ID for the trailer (assuming it's stored in featuredMovie)
-    setCurrentVideoId(featuredMovie.trailerId || "osYpGSz_0i4"); // Default if not available
-    setVideoTitle(`${featuredMovie.title} Trailer`);
+    setVideoType('trailer');
     setShowPlayer(true);
   };
 
@@ -90,14 +99,20 @@ export default function MovieDetails() {
     <div className="movie-container">
       {/* Show MoviePlayer when showPlayer is true */}
       {showPlayer ? (
-      <div className="player-overlay">
-        <div className="player-header">
-          <button className="close-player-button" onClick={handleClosePlayer}>×</button>
-          <h2 className="player-title">{videoTitle}</h2>
+        <div className="player-overlay">
+          <div className="player-header">
+            <button className="close-player-button" onClick={handleClosePlayer}>×</button>
+            <h2 className="player-title">
+              {videoType === 'trailer' ? `${featuredMovie.title} Trailer` : featuredMovie.title}
+            </h2>
+          </div>
+          <MoviePlayer 
+            videoId="" // We'll use the movie data instead
+            videoTitle={videoType === 'trailer' ? `${featuredMovie.title} Trailer` : featuredMovie.title}
+            movieData={featuredMovie}
+          />
         </div>
-        <MoviePlayer videoId={currentVideoId} videoTitle={videoTitle} />
-      </div>
-    ) : (
+      ) : (
         <>
           {/* Close button */}
           <button className="close-button" aria-label="Close">
@@ -115,7 +130,7 @@ export default function MovieDetails() {
             </div>
 
             <div className="movie-content">
-              <h1 className="movie-title">{featuredMovie.title}</h1>
+              <h1 className="movie-title-watch">{featuredMovie.title}</h1>
               
               <div className="movie-description">
                 <p>{featuredMovie.description}</p>
@@ -154,13 +169,13 @@ export default function MovieDetails() {
           <div className="related-section">
             <h2 className="related-title">Related</h2>
             
-            {/* New container for related movies with positioning context for buttons */}
+            {/* Container for related movies with positioning context for buttons */}
             <div className="related-movies-container">
               <div className="related-movies">
                 {visibleMovies.map((movie) => (
                   <div 
                     key={movie.id} 
-                    className="movie-card" 
+                    className="movie-card-watch" 
                     onClick={() => handleMovieClick(movie)}
                   >
                     <div className="movie-poster">
@@ -181,7 +196,7 @@ export default function MovieDetails() {
                 ))}
               </div>
 
-              {/* Navigation buttons */}
+              {/* Navigation buttons - only show if there are more movies than fit in one view */}
               {allMovies.length > itemsPerPage && (
                 <>
                   {/* Previous button only appears after navigating forward */}
