@@ -1,0 +1,383 @@
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  color: white;
+  padding: 0.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.top-section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.top-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.top-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-gradient {
+  position: absolute;
+  inset: 0;
+  /* Updated gradient to exactly match the #1C1C1C of the related section */
+  background: linear-gradient(to top, rgba(28, 28, 28, 1) 0%, rgba(28, 28, 28, 0.8) 40%, rgba(28, 28, 28, 0.4) 100%);
+  z-index: 1;
+}
+
+.movie-content {
+  z-index: 2;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.movie-title-watch {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.movie-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.movie-metadata {
+  margin-bottom: 1.5rem;
+}
+
+.metadata-info {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #e5e5e5;
+  font-size: 1.1rem;
+}
+
+.cast-crew {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #a0aec0;
+  line-height: 1.5;
+}
+
+.starring, .director {
+  margin: 0.25rem 0;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Watch Button */
+.watch-button {
+  background-color: #e50914;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.play-icon {
+  font-size: 1rem;
+}
+
+/* Trailer + Watchlist Buttons */
+.trailer-button,
+.watchlist-button {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trailer-button:hover,
+.watchlist-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.plus-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Related section */
+.related-section {
+  padding: 2rem;
+  position: relative;
+  background-color: #1C1C1C;
+}
+
+.related-movies-container {
+  position: relative;
+  padding: 0 3rem; /* Add padding to make space for the buttons */
+}
+
+.related-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.related-movies {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.movie-card-watch {
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.movie-card-watch:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+}
+
+.movie-card-info {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.movie-card-rating {
+  color: #ecc94b;
+}
+
+.movie-card-year {
+  color: #a0aec0;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically in the row */
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-button {
+  left: 1rem; /* More space from the edge */
+}
+
+.next-button {
+  right: 1rem; /* More space from the edge */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .related-movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .movie-title-watch {
+    font-size: 2.5rem;
+  }
+  
+  .related-movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-section {
+    height: auto;
+    min-height: 500px;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  
+  .movie-title-watch {
+    font-size: 2rem;
+  }
+  
+  .movie-description {
+    font-size: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .watch-button, .trailer-button, .watchlist-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+  }
+  
+  .related-movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .related-movies-container {
+    padding: 0 2.5rem;
+  }
+  
+  .nav-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .prev-button {
+    left: 0.5rem;
+  }
+  
+  .next-button {
+    right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movie-title-watch {
+    font-size: 1.75rem;
+  }
+  
+  .metadata-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .related-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .related-movies {
+    gap: 1rem;
+  }
+}
+
+.movie-card-watch {
+  cursor: pointer;  /* Add cursor pointer to indicate clickable */
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card-watch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional: Add a subtle animation for when movies are clicked */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.movie-card-watch:active {
+  animation: pulse 0.3s ease;
+}

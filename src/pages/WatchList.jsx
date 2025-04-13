@@ -3,6 +3,7 @@ import { Nav_setting } from '../Components/navigation-bar/Nav_setting';
 import { Footer } from '../Components/footer/Footer';
 import WatchListCom from '../Components/watchList/WatchlistCom'
 import { useUser } from '../Components/context/UserProvider';
+import "../Components/watchList/watchList.css"
 
 export const WatchList = () => {
   const { user } = useUser();
@@ -12,12 +13,16 @@ export const WatchList = () => {
 
   return (
     <>
-      <Nav_setting />
-      <WatchListCom 
-        title={user ? `${user.username}'s Watchlist` : "Watchlist"} 
-        movies={userWatchlist} 
-      />
-      <Footer />
+      <div className="watchListContainer">
+        <Nav_setting />
+        <div className="main-watchlist">
+          <WatchListCom 
+            title={user ? `${user.username}'s Watchlist` : "Watchlist"} 
+            movies={userWatchlist} 
+          />
+        </div>
+        <Footer />
+      </div>
     </>
   )
 }

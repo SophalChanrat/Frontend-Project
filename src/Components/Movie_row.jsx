@@ -1,11 +1,16 @@
 "use client";
 
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Movie_row.css";
 
 export function Movie_row({ title, movies }) {
   const scrollContainerRef = useRef(null);
+  const navigate = useNavigate();
 
+  const handleMovieClick = (movie) => {
+    navigate(`/movie/${movie.id}`, { state: { movie } }); // 👈 Navigate to MovieDetails
+  };
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
@@ -36,7 +41,12 @@ export function Movie_row({ title, movies }) {
         <div ref={scrollContainerRef} className="movie-slider">
           {movies.map((movie) => (
             <div key={movie.id} className="movie-card">
-              <div className="movie-poster">
+              <div
+                key={movie.id}
+                onClick={() => handleMovieClick(movie)}
+                className="movie-poster"
+                style={{cursor: "pointer"}}
+               >
                 <img
                   src={movie.image || "/placeholder.svg"}
                   alt={movie.title}

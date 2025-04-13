@@ -121,3 +121,12 @@
 .watchlist-remove-button:hover {
   background-color: #c82333;
 }
+.watchListContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.main-watchlist{
+  height: 80%;
+}
