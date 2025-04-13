@@ -1,10 +1,10 @@
 import React from 'react';
-import WatchMovie from './Components/Watch_movie.jsx';
+import SeriesPage from './Components/Series_page';
 
 function App() {
   return (
     <div className="App">
-      <WatchMovie />
+      <SeriesPage />
       {/* Add other components here as needed */}
     </div>
 
