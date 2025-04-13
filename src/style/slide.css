@@ -1,0 +1,196 @@
+/* Core Slide Styles */
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  
+  /* Responsive Background Image */
+  .slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures it fills without distortion */
+    object-position: center;
+    z-index: -1;
+  }
+  
+  /* Overlay with Dual Gradient */
+  .slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end; /* aligns content to bottom */
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent),
+        linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, transparent 60%);
+    z-index: 0;
+    /* padding: 2rem */
+  }
+  
+  /* Content Container */
+  .slide-info {
+    max-width: min(600px, 100%);
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px;   /* Distance from the left */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 4rem;
+  }
+  
+  /* Genre Tags */
+  .slide-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .genre-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+  
+  /* Title */
+  .slide-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Description */
+  .slide-desc {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Action Buttons */
+  .slide-actions {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: clamp(0.6rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 30px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .btn.red {
+    background-color: #e50914;
+    color: white;
+  }
+  
+  .btn.outline {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+  }
+  
+  .btn.icon-only {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: clamp(0.6rem, 2vw, 0.75rem);
+    border-radius: 50%;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Navigation Arrows */
+  .slide-nav {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    z-index: 2;
+  }
+  
+  .slide-nav button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: clamp(0.8rem, 2vw, 1rem);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .slide-nav button:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Icons */
+  .icon {
+    width: clamp(18px, 3vw, 20px);
+    height: clamp(18px, 3vw, 20px);
+    filter: invert(1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (orientation: portrait) {
+    .slide-bg {
+      object-fit: contain;
+      background-color: #000;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slide-overlay {
+      align-items: flex-start;
+      padding: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .slide-nav {
+      align-self: center;
+      margin-top: 2rem;
+    }
+    
+    .slide-bg {
+      object-position: center top;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    .slide {
+      min-height: 100vh;
+    }
+    
+    .slide-title {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .slide-desc {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 1.5rem;
+    }
+  }

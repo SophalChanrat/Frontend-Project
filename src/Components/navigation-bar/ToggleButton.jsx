@@ -12,7 +12,10 @@ export const ToggleButton = () => {
         toggleMediaType(type);
         
         // Handle category paths
-        if (location.pathname.includes('/action')) {
+        if (location.pathname === '/' || location.pathname === '/series') {
+            // Handle home page toggle
+            navigate(type === 'series' ? '/series' : '/');
+        } else if (location.pathname.includes('/action')) {
             navigate(type === 'series' ? '/action/series' : '/action');
         } else if (location.pathname.includes('/romance')) {
             navigate(type === 'series' ? '/romance/series' : '/romance');
@@ -22,9 +25,6 @@ export const ToggleButton = () => {
             navigate(type === 'series' ? '/horror/series' : '/horror');
         } else if (location.pathname.includes('/anime')) {
             navigate(type === 'series' ? '/anime/series' : '/anime');
-        } else {
-            // Home path - always navigate to '/'
-            navigate('/');
         }
     };
 

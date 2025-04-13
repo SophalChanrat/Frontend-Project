@@ -3,6 +3,7 @@ import { Navigation_baar } from '../Components/navigation-bar/Navigation_baar'
 import { Footer } from '../Components/footer/Footer'
 import { Movie_row } from '../Components/Movie_row'
 import { CategoryChooser } from '../Components/CategoryChooser'
+import { Banner} from '../Components/Banner'
 import guadian from "../assets/action/guardian.jpg";
 import deadpool from "../assets/action/deadpool.jpg";
 import iamlegend from "../assets/action/Iamlegend.jpg";
@@ -19,6 +20,7 @@ export const ActionPage = () => {
   return (
     <>
         <Navigation_baar />
+        <Banner />
         <CategoryChooser />
         <div className="main-content">
             <Movie_row title="Trending Today" movies={actionMovies} />

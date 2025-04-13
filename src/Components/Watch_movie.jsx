@@ -17,7 +17,8 @@ export default function MovieDetails() {
   const [showPlayer, setShowPlayer] = useState(false);
   const [currentVideoId, setCurrentVideoId] = useState('');
   const [videoTitle, setVideoTitle] = useState('');
-  
+  const [videoType, setVideoType] = useState('movie'); // Add this new state
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasNavigated, setHasNavigated] = useState(false);
   const itemsPerPage = 6;
@@ -68,7 +69,7 @@ export default function MovieDetails() {
     setHasNavigated(false);
   };
   const handleWatchClick = () => {
-    // Set the video ID for the full movie (assuming it's stored in featuredMovie)
+    setVideoType('movie');
     setCurrentVideoId(featuredMovie.videoId || "osYpGSz_0i4"); // Default if not available
     setVideoTitle(`${featuredMovie.title}`);
     setShowPlayer(true);
@@ -76,7 +77,7 @@ export default function MovieDetails() {
 
   // Function to handle trailer button click
   const handleTrailerClick = () => {
-    // Set the video ID for the trailer (assuming it's stored in featuredMovie)
+    setVideoType('trailer');
     setCurrentVideoId(featuredMovie.trailerId || "osYpGSz_0i4"); // Default if not available
     setVideoTitle(`${featuredMovie.title} Trailer`);
     setShowPlayer(true);
@@ -97,7 +98,11 @@ export default function MovieDetails() {
             <button className="close-player-button" onClick={handleClosePlayer}>×</button>
             <h2 className="player-title">{videoTitle}</h2>
           </div>
-          <MoviePlayer videoId={currentVideoId} videoTitle={videoTitle} />
+          <MoviePlayer 
+            videoId={currentVideoId} 
+            videoTitle={videoTitle} 
+            movieData={featuredMovie} // Pass the entire movie data
+          />
         </div>
       ) : (
         // Wrap your existing content in a fragment
