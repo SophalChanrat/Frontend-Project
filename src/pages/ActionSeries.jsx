@@ -12,9 +12,9 @@ export const ActionSeries = () => {
         <Navigation_baar />
         <CategoryChooser />
         <div className="main-content">
-            <Movie_row title="Trending Series" movies={actionSeries} type='series'/>
+            <Movie_row title="Trending Today" movies={actionSeries} type='series'/>
             <Movie_row title="Latest Release" movies={actionSeries} type='series'/>
-            <Movie_row title="Coming soon" movies={actionSeries} type='series'/>
+            <Movie_row title="Coming Soon" movies={actionSeries} type='series'/>
         </div>
         <Footer />
     </>

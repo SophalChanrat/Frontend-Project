@@ -6,7 +6,7 @@ import related5 from "../assets/related5.jpg";
 import related6 from "../assets/related6.jpg";
 import related7 from "../assets/related7.jpg";
 import related8 from "../assets/related8.jpg";
-import trending1 from "../assets/trending.png";
+import trendingthe from "../assets/trending.png";
 import thumbnail1 from "../assets/thumbnail1.jpg";
 import cover1 from "../assets/cover1.jpg";
 import cover2 from "../assets/cover2.jpg";
@@ -43,6 +43,44 @@ import Crazy from "../assets/Crazy.jpg";
 import Emily from "../assets/Emily.webp";
 import Heart from "../assets/Heart.jpg";
 import Summer from "../assets/Summer.webp";
+import COCO from "../assets/COCO.jpg";
+import KungFu from "../assets/kung-fu-panda-4-he-poster.jpg";
+import InsideOut from "../assets/Inside-out2.jpeg";
+import Nemo from "../assets/Nemo.jpeg";
+import Spiderman from "../assets/Spiderman.jpg";
+import zootopia from "../assets/zootopia.jpg";
+import lastest1 from "../assets/trending/latest1.jpg";
+import lastest2 from "../assets/trending/latest2.jpg";
+import lastest3 from "../assets/trending/latest3.jpg";
+import lastest4 from "../assets/trending/latest4.jpg";
+import lastest5 from "../assets/trending/latest5.jpg";
+import lastest6 from "../assets/trending/latest6.jpg";
+import lastest7 from "../assets/trending/latest7.jpg";
+import lastest8 from "../assets/trending/latest8.jpg";
+import trending1 from "../assets/trending/trending1.jpg";
+import trending2 from "../assets/trending/trending2.jpg";
+import trending3 from "../assets/trending/trending3.jpg";
+import trending4 from "../assets/trending/trending4.jpg";
+import trending5 from "../assets/trending/trending5.jpg";
+import trending6 from "../assets/trending/trending6.jpg";
+import trending7 from "../assets/trending/trending7.jpg";
+import trending8 from "../assets/trending/trending8.jpg";
+import upcoming1 from "../assets/trending/upcoming1.jpg";
+import upcoming2 from "../assets/trending/upcoming2.jpg";
+import upcoming3 from "../assets/trending/upcoming3.jpg";
+import upcoming4 from "../assets/trending/upcoming4.jpg";
+import upcoming5 from "../assets/trending/upcoming5.jpg";
+import upcoming6 from "../assets/trending/upcoming6.jpg";
+import upcoming7 from "../assets/trending/upcoming7.jpg";
+import upcoming8 from "../assets/trending/upcoming8.jpg";
+
+
+
+
+
+
+
+
 
 
 export const movieDetails = {
@@ -54,7 +92,7 @@ export const movieDetails = {
     starring: "Robert Pattinson, Naomi Ackie and Steven Yeun",
     director: "Bong Joon-ho",
     rating: 4.5,
-    backgroundImage: trending1,
+    backgroundImage: trendingthe,
     thumbnail: thumbnail1
   };
 
@@ -637,4 +675,435 @@ export const romanceSeries = [
       thumbnail: Summer,
       image: Summer
   }
+];
+export const animationMovie = [
+    {
+        id: 1,
+        title: "CoCo",
+        description: "A young boy enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+        genre: "Animation, Adventure",
+        year: 2025,
+        duration: "1h 45m",
+        starring: "Anthony Gonzalez, Gael García Bernal",
+        director: "Lee Unkrich",
+        rating: 7.1,
+        backgroundImage: COCO,
+        thumbnail: COCO,
+        image: COCO
+    },
+    {
+        id: 2,
+        title: "KungFu Panda 4",
+        description: "Po must train a new Dragon Warrior while facing a powerful new threat.",
+        genre: "Animation, Action",
+        year: 2024,
+        duration: "1h 34m",
+        starring: "Jack Black, Awkwafina",
+        director: "Mike Mitchell",
+        rating: 7.6,
+        backgroundImage: KungFu,
+        thumbnail: KungFu,
+        image: KungFu
+    },
+    {
+        id: 3,
+        title: "Inside Out 2",
+        description: "Riley's mind welcomes new emotions as she enters her teenage years.",
+        genre: "Animation, Comedy",
+        year: 2024,
+        duration: "1h 40m",
+        starring: "Amy Poehler, Phyllis Smith",
+        director: "Kelsey Mann",
+        rating: 7.5,
+        backgroundImage: InsideOut,
+        thumbnail: InsideOut,
+        image: InsideOut
+    },
+    {
+        id: 4,
+        title: "Nemo",
+        description: "A clownfish searches the ocean for his lost son.",
+        genre: "Animation, Adventure",
+        year: 2014,
+        duration: "1h 40m",
+        starring: "Albert Brooks, Ellen DeGeneres",
+        director: "Andrew Stanton",
+        rating: 7.3,
+        backgroundImage: Nemo,
+        thumbnail: Nemo,
+        image: Nemo
+    },
+    {
+        id: 5,
+        title: "Spider-man: into the spider-verse",
+        description: "Miles Morales becomes Spider-Man and joins other Spider-People from various dimensions.",
+        genre: "Animation, Action",
+        year: 2021,
+        duration: "1h 57m",
+        starring: "Shameik Moore, Jake Johnson",
+        director: "Peter Ramsey",
+        rating: 9.0,
+        backgroundImage: Spiderman,
+        thumbnail: Spiderman,
+        image: Spiderman
+    },
+    {
+        id: 6,
+        title: "Zootopia",
+        description: "In a city of anthropomorphic animals, a rookie bunny cop must solve a conspiracy.",
+        genre: "Animation, Adventure",
+        year: 2015,
+        duration: "1h 48m",
+        starring: "Ginnifer Goodwin, Jason Bateman",
+        director: "Byron Howard",
+        rating: 6.0,
+        backgroundImage: zootopia,
+        thumbnail: zootopia,
+        image: zootopia
+    }
+];
+
+export const trendingMovies = [
+    {
+        id: 1,
+        title: "Mickey 17",
+        description: "A man joins a space colony as an expendable worker, who gets cloned after each death.",
+        genre: "Sci-Fi, Action",
+        year: 2024,
+        duration: "2h 15m",
+        starring: "Robert Pattinson, Steven Yeun",
+        director: "Bong Joon-ho",
+        rating: 8.5,
+        backgroundImage: trending1,
+        thumbnail: trending1,
+        image: trending1
+    },
+    {
+        id: 2,
+        title: "Anora",
+        description: "A mysterious woman with supernatural abilities must protect a young girl from dark forces.",
+        genre: "Fantasy, Adventure",
+        year: 2024,
+        duration: "2h 10m",
+        starring: "Saoirse Ronan, Millie Bobby Brown",
+        director: "Ava DuVernay",
+        rating: 7.8,
+        backgroundImage: trending2,
+        thumbnail: trending2,
+        image: trending2
+    },
+    {
+        id: 3,
+        title: "The Brutalist",
+        description: "A visionary architect struggles to maintain his artistic integrity in post-WWII America.",
+        genre: "Drama, Biography",
+        year: 2024,
+        duration: "2h 25m",
+        starring: "Sebastian Stan, Marion Cotillard",
+        director: "Brady Corbet",
+        rating: 7.9,
+        backgroundImage: trending3,
+        thumbnail: trending3,
+        image: trending3
+    },
+    {
+        id: 4,
+        title: "Captain America: Brave New World",
+        description: "Sam Wilson faces his first major challenge as the new Captain America.",
+        genre: "Action, Adventure",
+        year: 2024,
+        duration: "2h 30m",
+        starring: "Anthony Mackie, Harrison Ford",
+        director: "Julius Onah",
+        rating: 8.2,
+        backgroundImage: trending4,
+        thumbnail: trending4,
+        image: trending4
+    },
+    {
+        id: 5,
+        title: "Last Breath",
+        description: "A deep-sea diver becomes stranded on the seabed with only minutes of oxygen remaining.",
+        genre: "Thriller, Drama",
+        year: 2024,
+        duration: "1h 55m",
+        starring: "Tom Hardy, Matthias Schoenaerts",
+        director: "Alex Parkinson",
+        rating: 7.6,
+        backgroundImage: trending5,
+        thumbnail: trending5,
+        image: trending5
+    },
+    {
+        id: 6,
+        title: "Flow",
+        description: "A gifted street dancer discovers a hidden underground dance movement.",
+        genre: "Drama, Music",
+        year: 2024,
+        duration: "2h 05m",
+        starring: "Sofia Carson, Jordan Fisher",
+        director: "Adam Shankman",
+        rating: 7.4,
+        backgroundImage: trending6,
+        thumbnail: trending6,
+        image: trending6
+    },
+    {
+        id: 7,
+        title: "Minecraft",
+        description: "A teenage girl and her friends embark on an epic adventure in the world of Minecraft.",
+        genre: "Adventure, Family",
+        year: 2024,
+        duration: "1h 55m",
+        starring: "Jack Black, Jason Momoa",
+        director: "Jared Hess",
+        rating: 7.7,
+        backgroundImage: trending7,
+        thumbnail: trending7,
+        image: trending7
+    },
+    {
+        id: 8,
+        title: "The Life List",
+        description: "A woman discovers her late mother's bucket list and embarks on a life-changing journey.",
+        genre: "Drama, Comedy",
+        year: 2024,
+        duration: "2h 00m",
+        starring: "Emma Stone, Laura Dern",
+        director: "Greta Gerwig",
+        rating: 7.8,
+        backgroundImage: trending8,
+        thumbnail: trending8,
+        image: trending8
+    }
+];
+
+export const latestMovies = [
+    {
+        id: 1,
+        title: "Snow White",
+        description: "A live-action adaptation of Disney's classic tale about a princess and her evil stepmother.",
+        genre: "Fantasy, Adventure",
+        year: 2024,
+        duration: "2h 00m",
+        starring: "Rachel Zegler, Gal Gadot",
+        director: "Marc Webb",
+        rating: 7.5,
+        backgroundImage: lastest1,
+        thumbnail: lastest1,
+        image: lastest1
+    },
+    {
+        id: 2,
+        title: "Minecraft",
+        description: "A teenage girl and her friends embark on an epic adventure in the world of Minecraft.",
+        genre: "Adventure, Family",
+        year: 2024,
+        duration: "1h 55m",
+        starring: "Jack Black, Jason Momoa",
+        director: "Jared Hess",
+        rating: 7.7,
+        backgroundImage: lastest2,
+        thumbnail: lastest2,
+        image: lastest2
+    },
+    {
+        id: 3,
+        title: "The King of Kings",
+        description: "An epic historical drama about the rise of a legendary ancient ruler.",
+        genre: "Historical, Drama",
+        year: 2024,
+        duration: "2h 45m",
+        starring: "Timothée Chalamet, Oscar Isaac",
+        director: "Ridley Scott",
+        rating: 8.1,
+        backgroundImage: lastest3,
+        thumbnail: lastest3,
+        image: lastest3
+    },
+    {
+        id: 4,
+        title: "Drop",
+        description: "A professional skydiver becomes entangled in a dangerous conspiracy.",
+        genre: "Action, Thriller",
+        year: 2024,
+        duration: "1h 50m",
+        starring: "Tom Cruise, Zoe Saldana",
+        director: "Christopher McQuarrie",
+        rating: 7.4,
+        backgroundImage: lastest4,
+        thumbnail: lastest4,
+        image: lastest4
+    },
+    {
+        id: 5,
+        title: "The Amateur",
+        description: "A rookie CIA agent must prove herself in a high-stakes mission.",
+        genre: "Thriller, Action",
+        year: 2024,
+        duration: "2h 10m",
+        starring: "Florence Pugh, Daniel Kaluuya",
+        director: "Emerald Fennell",
+        rating: 7.6,
+        backgroundImage: lastest5,
+        thumbnail: lastest5,
+        image: lastest5
+    },
+    {
+        id: 6,
+        title: "A Working Man",
+        description: "The inspiring story of a blue-collar worker fighting for workers' rights.",
+        genre: "Drama, Biography",
+        year: 2024,
+        duration: "2h 15m",
+        starring: "Matt Damon, Viola Davis",
+        director: "Kenneth Lonergan",
+        rating: 7.9,
+        backgroundImage: lastest6,
+        thumbnail: lastest6,
+        image: lastest6
+    },
+    {
+        id: 7,
+        title: "The Friend",
+        description: "A psychological thriller about a friendship that takes a dark turn.",
+        genre: "Thriller, Drama",
+        year: 2024,
+        duration: "2h 05m",
+        starring: "Jessica Chastain, Anne Hathaway",
+        director: "David Fincher",
+        rating: 7.8,
+        backgroundImage: lastest7,
+        thumbnail: lastest7,
+        image: lastest7
+    },
+    {
+        id: 8,
+        title: "Hell of Summer",
+        description: "A group of teenagers face supernatural horrors at a summer camp.",
+        genre: "Horror, Mystery",
+        year: 2024,
+        duration: "1h 55m",
+        starring: "Jenna Ortega, Finn Wolfhard",
+        director: "Mike Flanagan",
+        rating: 7.3,
+        backgroundImage: lastest8,
+        thumbnail: lastest8,
+        image: lastest8
+    }
+];
+
+export const upcomingMovies = [
+    {
+        id: 1,
+        title: "The Fantastic 4: First Step",
+        description: "Marvel's first family gets a modern origin story as they discover their newfound powers.",
+        genre: "Action, Sci-Fi",
+        year: 2025,
+        duration: "2h 20m",
+        starring: "John Krasinski, Emily Blunt",
+        director: "Matt Shakman",
+        rating: 8.0,
+        backgroundImage: upcoming1,
+        thumbnail: upcoming1,
+        image: upcoming1
+    },
+    {
+        id: 2,
+        title: "Thunderbolts",
+        description: "A team of antiheroes is recruited for a dangerous mission by the government.",
+        genre: "Action, Adventure",
+        year: 2025,
+        duration: "2h 15m",
+        starring: "Florence Pugh, Sebastian Stan",
+        director: "Jake Schreier",
+        rating: 7.8,
+        backgroundImage: upcoming2,
+        thumbnail: upcoming2,
+        image: upcoming2
+    },
+    {
+        id: 3,
+        title: "Jurassic World: Rebirth",
+        description: "A new generation faces prehistoric threats as dinosaurs adapt to the modern world.",
+        genre: "Action, Adventure",
+        year: 2025,
+        duration: "2h 25m",
+        starring: "Chris Pratt, Bryce Dallas Howard",
+        director: "Colin Trevorrow",
+        rating: 7.7,
+        backgroundImage: upcoming3,
+        thumbnail: upcoming3,
+        image: upcoming3
+    },
+    {
+        id: 4,
+        title: "Toy Story 5",
+        description: "Woody, Buzz, and the gang embark on a new adventure with fresh faces.",
+        genre: "Animation, Adventure",
+        year: 2025,
+        duration: "1h 55m",
+        starring: "Tom Hanks, Tim Allen",
+        director: "Pete Docter",
+        rating: 8.2,
+        backgroundImage: upcoming4,
+        thumbnail: upcoming4,
+        image: upcoming4
+    },
+    {
+        id: 5,
+        title: "Superman",
+        description: "A fresh take on the Man of Steel's early years as Earth's protector.",
+        genre: "Action, Sci-Fi",
+        year: 2025,
+        duration: "2h 30m",
+        starring: "David Corenswet, Rachel Brosnahan",
+        director: "James Gunn",
+        rating: 8.1,
+        backgroundImage: upcoming5,
+        thumbnail: upcoming5,
+        image: upcoming5
+    },
+    {
+        id: 6,
+        title: "Rust",
+        description: "In a post-apocalyptic world, a lone survivor searches for hope in a rusted civilization.",
+        genre: "Sci-Fi, Drama",
+        year: 2025,
+        duration: "2h 10m",
+        starring: "Tom Hardy, Charlize Theron",
+        director: "Neill Blomkamp",
+        rating: 7.6,
+        backgroundImage: upcoming6,
+        thumbnail: upcoming6,
+        image: upcoming6
+    },
+    {
+        id: 7,
+        title: "The Surfer",
+        description: "A legendary surfer faces his greatest challenge both on and off the waves.",
+        genre: "Drama, Sport",
+        year: 2025,
+        duration: "2h 05m",
+        starring: "Luke Bracey, Teresa Palmer",
+        director: "Catherine Hardwicke",
+        rating: 7.4,
+        backgroundImage: upcoming7,
+        thumbnail: upcoming7,
+        image: upcoming7
+    },
+    {
+        id: 8,
+        title: "Sinners",
+        description: "A gritty crime thriller following seven interconnected stories of redemption.",
+        genre: "Crime, Drama",
+        year: 2025,
+        duration: "2h 35m",
+        starring: "Cillian Murphy, Emily Blunt",
+        director: "Denis Villeneuve",
+        rating: 7.9,
+        backgroundImage: upcoming8,
+        thumbnail: upcoming8,
+        image: upcoming8
+    }
 ];

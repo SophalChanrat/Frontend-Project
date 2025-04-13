@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home.jsx";
+import Home from "./pages/Home.jsx";
 import Setting from "./pages/Setting.jsx";
 import {Plan} from "./pages/Plan.jsx"
 import { PlanProvider } from "./Components/context/PlanProvider.jsx";
@@ -14,6 +14,7 @@ import RomancePage from "./pages/RomancePage.jsx";
 import { RomanceSeries } from "./pages/RomanceSeries.jsx";
 import MovieDetails from "./Components/Watch_movie.jsx";
 import SeriesPage from "./Components/Series_page";
+import { AnimationPage } from "./pages/AnimationPage.jsx";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/series/:id" element={<SeriesPage />} />
           <Route path="/romance/series" element={<RomanceSeries />} />
+          <Route path="/animation" element={<AnimationPage />} />
           {/* Add more routes as needed */}
         </Routes>
       </UserProvider>

@@ -11,9 +11,9 @@ export default function RomancePage() {
         <Navigation_baar />
         <CategoryChooser />
         <div className="main-content">
-            <Movie_row title="Trending today" movies={romanceMovies} />
+            <Movie_row title="Trending Today" movies={romanceMovies} />
             <Movie_row title="Latest Release" movies={romanceMovies} />
-            <Movie_row title="Comming soon" movies={romanceMovies} />
+            <Movie_row title="Coming Soon" movies={romanceMovies} />
         </div>
         <Footer />
       </>

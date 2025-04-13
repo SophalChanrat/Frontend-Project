@@ -21,9 +21,9 @@ export const ActionPage = () => {
         <Navigation_baar />
         <CategoryChooser />
         <div className="main-content">
-            <Movie_row title="Trending Movie" movies={actionMovies} />
-            {/* <Movie_row title="Lastest Release" movies={latestMovies} />
-            <Movie_row title="Coming soon" movies={comingSoonMovies} /> */}
+            <Movie_row title="Trending Today" movies={actionMovies} />
+            <Movie_row title="Lastest Release" movies={actionMovies} />
+            <Movie_row title="Coming Soon" movies={actionMovies} />
         </div>
         <Footer />
     </>

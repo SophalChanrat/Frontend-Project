@@ -11,9 +11,9 @@ export const RomanceSeries = () => {
         <Navigation_baar />
         <CategoryChooser />
         <div className="main-content">
-            <Movie_row title="Trending today" movies={romanceSeries} />
-            <Movie_row title="Latest release" movies={romanceSeries} />
-            <Movie_row title="Comming soon" movies={romanceSeries} />
+            <Movie_row title="Trending Today" movies={romanceSeries} />
+            <Movie_row title="Latest Release" movies={romanceSeries} />
+            <Movie_row title="Coming Soon" movies={romanceSeries} />
         </div>
         <Footer />
     </div>
