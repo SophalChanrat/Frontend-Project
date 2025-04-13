@@ -1,10 +1,10 @@
 import React from 'react';
-import WatchMovie from './Components/Watch_movie';
+import MoviePlayer from './Components/Movie_player';
 
 function App() {
   return (
     <div className="App">
-      <WatchMovie />
+      <MoviePlayer />
     </div>
   );
 }
