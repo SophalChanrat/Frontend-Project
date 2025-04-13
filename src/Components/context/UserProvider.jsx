@@ -4,6 +4,7 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [mediaType, setMediaType] = useState("movie"); // Default media type is "movie"
 
   // Load user from localStorage on first load
   useEffect(() => {
@@ -27,9 +28,12 @@ export const UserProvider = ({ children }) => {
     localStorage.removeItem("loggedInUser"); // Remove user from localStorage
     setUser(null); // Clear user state
   };
-
+  const toggleMediaType = (type) => {
+    setMediaType(type);
+    
+  }
   return (
-    <UserContext.Provider value={{ user,setUser, updateUser, logoutUser }}>
+    <UserContext.Provider value={{ user,setUser, updateUser, logoutUser, mediaType, toggleMediaType }}>
       {children}
     </UserContext.Provider>
   );

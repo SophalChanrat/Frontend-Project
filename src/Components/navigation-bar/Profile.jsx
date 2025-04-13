@@ -1,5 +1,5 @@
 import React from 'react'
-import pic from "../../assets/react.svg"
+import pic from "../../assets/logo/react.svg"
 import { Link } from 'react-router-dom'
 
 export const Profile = ({userName, plan}) => {

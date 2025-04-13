@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from "../../assets/react.svg"
+import profile from "../../assets/logo/react.svg"
 import "./setting.css"
 
 export const Setting_pf = ({userName}) => {

@@ -1,28 +1,55 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import '../App.css'
-import { Link } from 'react-router-dom'
-import action from '../assets/action.svg'
-import animation from '../assets/animation.svg'
-import romance from '../assets/romance.svg'
-import horror from '../assets/horror.svg'
-import anime from '../assets/anime.svg'
-import trending from '../assets/trending.svg'
+import { Link, useLocation } from 'react-router-dom'
+import { useUser } from './context/UserProvider'
+import action from '../assets/logo/action.svg'
+import animation from '../assets/logo/animation.svg'
+import romance from '../assets/logo/romance.svg'
+import horror from '../assets/logo/horror.svg'
+import anime from '../assets/logo/anime.svg'
+import trending from '../assets/logo/trending.svg'
 
 export const CategoryChooser = () => {
-    const [activeCategory, setActiveCategory] = useState('Trending')
+    const location = useLocation();
+    const { mediaType } = useUser();
 
-    const categories = [
-        { name: 'Trending', icon: trending , location: '/trending'},
-        { name: 'Action', icon: action, location: '/action'},
-        { name: 'Romance', icon: romance, location: '/romance'},
-        { name: 'Animation', icon: animation, location: '/animation'},
-        { name: 'Horror', icon: horror, location: '/horror'},
-        { name: 'Anime', icon: anime, location: '/anime'},
-    ]
+    const categories = useMemo(() => [
+        { 
+            name: 'Trending', 
+            icon: trending, 
+            location: mediaType === 'series' ? '/series' : '/'
+        },
+        { 
+            name: 'Action', 
+            icon: action, 
+            location: mediaType === 'series' ? '/action/series' : '/action'
+        },
+        { 
+            name: 'Romance', 
+            icon: romance, 
+            location: mediaType === 'series' ? '/romance/series' : '/romance'
+        },
+        { 
+            name: 'Animation',
+            icon: animation,
+            location: mediaType === 'series' ? '/animation/series' : '/animation'
+        },
+        { 
+            name: 'Horror', 
+            icon: horror, 
+            location: mediaType === 'series' ? '/horror/series' : '/horror'
+        },
+        { 
+            name: 'Anime', 
+            icon: anime, 
+            location: mediaType === 'series' ? '/anime/series' : '/anime'
+        }
+    ], [mediaType]);
 
-    const handleActive = (categoryName) => {
-        setActiveCategory(categoryName)
-    }
+    const currentCategory = useMemo(() => {
+        const found = categories.find(c => c.location === location.pathname);
+        return found ? found.name : 'Trending'; // fallback to Trending
+    }, [location.pathname, categories]);
 
     return (
         <div className="category-list">
@@ -30,8 +57,7 @@ export const CategoryChooser = () => {
                 <Link
                     key={name}
                     to={location}
-                    className={`category-button ${activeCategory === name ? 'active' : ''}`}
-                    onClick={() => handleActive(name)}
+                    className={`category-button ${currentCategory === name ? 'active' : ''}`}
                 >
                     <img src={icon} alt={name.toLowerCase()} />
                     {name}

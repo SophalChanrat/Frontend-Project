@@ -8,6 +8,8 @@ import { UserProvider } from "./Components/context/UserProvider.jsx";
 import { LoginPg } from "./pages/LoginPg.jsx";
 import { SignupPg } from "./pages/SignupPg.jsx";
 import { WatchList } from "./pages/WatchList.jsx";
+import { ActionPage } from "./pages/ActionPage.jsx";
+import { ActionSeries } from "./pages/ActionSeries.jsx";
 
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
           <Route path="/login" element={<LoginPg />} />
           <Route path="/signup" element={<SignupPg />} />
           <Route path="/watchlist" element={<WatchList />} />
-          <Route path="trending" element={<Home />} />
+          <Route path="/action" element={<ActionPage />} />
+          <Route path="/action/series" element={<ActionSeries />} />
         </Routes>
       </UserProvider>
     </PlanProvider>

@@ -1,7 +1,7 @@
 .trending-container {
   /* height: 65vh; */
   padding: 2rem;
-  padding-top: 5rem; /* Adjust for navigation bar height */
+  padding-top: 2rem; /* Adjust for navigation bar height */
   font-family: Arial, sans-serif;
   width: 100%; /* Adjusted to fit the screen width */
   box-sizing: border-box; /* Ensure padding is included in width */
