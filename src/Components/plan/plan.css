@@ -1,0 +1,92 @@
+.plan-card {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 30px 20px;
+    color: white;
+    width: 280px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn{
+    display: flex;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #E50914;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .plan-card:hover {
+    border: 1px solid #912e85;
+  }
+  
+  .btn.selected {
+    background-color: #444;
+  }
+  
+  .plan-card h3 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .duration {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .plan-card .icon {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .plan-card ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .plan-card li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .change-plan-container {
+    background-color: #151515;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .change-plan-container h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .plan-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .plan-card {
+      width: 90%;
+    }
+  }
+  @media (max-width: 480px) {
+    .plan-options{
+        flex-direction: column;
+    }
+    .plan-card {
+      width: 90%;
+    }
+  }
+  
