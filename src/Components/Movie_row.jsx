@@ -47,7 +47,7 @@ export function Movie_row({ title, movies, type="movie" }) {
             <div key={movie.id} className="movie-card">
               <div
                 key={movie.id}
-                onClick={() => handleItemClick(item)}
+                onClick={() => handleItemClick(movie)}
                 className="movie-poster"
                 style={{cursor: "pointer"}}
                >

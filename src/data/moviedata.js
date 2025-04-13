@@ -273,116 +273,197 @@ export const movieDetails = {
   ];
   export const actionSeries = [
     {
-        id: 'series-1',
+        id: 1,
         title: "Daredevil",
+        subtitle: "Marvel Series",
         description: "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil.",
         genre: "Action, Crime, Drama",
         year: 2015,
         duration: "3 Seasons",
-        starring: "Charlie Cox, Deborah Ann Woll, Vincent D'Onofrio",
+        starring: "Charlie Cox, Deborah Ann Woll",
         director: "Drew Goddard",
         rating: 7.1,
+        image: daredevil,
         backgroundImage: daredevil,
-        thumbnail: daredevil,
-        image: daredevil
+        episodes: [
+            {
+                id: 1,
+                title: "Into the Ring",
+                description: "Murdock's vigilante crime fighting and his new law practice find equally dangerous challenges.",
+                duration: "53 min",
+                date: "April 10, 2015"
+            }
+        ]
     },
     {
-        id: 'series-2',
+        id: 2,
         title: "Loki",
-        description: "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers: Endgame.",
+        subtitle: "Marvel Series",
+        description: "The mercurial villain Loki resumes his role as the God of Mischief after the events of Avengers: Endgame.",
         genre: "Action, Adventure, Fantasy",
         year: 2021,
         duration: "2 Seasons",
-        starring: "Tom Hiddleston, Owen Wilson, Sophia Di Martino",
+        starring: "Tom Hiddleston, Owen Wilson",
         director: "Michael Waldron",
         rating: 7.6,
+        image: loki,
         backgroundImage: loki,
-        thumbnail: loki,
-        image: loki
+        episodes: [
+            {
+                id: 1,
+                title: "Glorious Purpose",
+                description: "Loki finds himself called before the Time Variance Authority.",
+                duration: "51 min",
+                date: "June 9, 2021"
+            }
+        ]
     },
     {
-        id: 'series-3',
+        id: 3,
         title: "Peacemaker",
-        description: "The origin of the DC superhero so dedicated to world peace that he'll kill absolutely anyone to achieve it.",
-        genre: "Action, Adventure, Comedy",
+        subtitle: "DC Series",
+        description: "The origin story of Peacemaker, a man who believes in peace at any cost.",
+        genre: "Action, Comedy, Adventure",
         year: 2022,
         duration: "1 Season",
-        starring: "John Cena, Danielle Brooks, Freddie Stroma",
+        starring: "John Cena, Danielle Brooks",
         director: "James Gunn",
         rating: 7.5,
+        image: peacemaker,
         backgroundImage: peacemaker,
-        thumbnail: peacemaker,
-        image: peacemaker
+        episodes: [
+            {
+                id: 1,
+                title: "A Whole New Whirled",
+                description: "After recovering from his injuries, Peacemaker returns to action.",
+                duration: "46 min",
+                date: "January 13, 2022",
+                image: peacemaker
+            },
+            {
+                id: 2,
+                title: "A Whole New Whirled",
+                description: "After recovering from his injuries, Peacemaker returns to action.",
+                duration: "46 min",
+                date: "January 13, 2022",
+                image: peacemaker
+            }
+        ]
     },
     {
-        id: 'series-4',
+        id: 4,
         title: "Prison Break",
-        description: "An engineer installs himself in a prison he helped design, in order to save his falsely accused brother from a death sentence.",
+        subtitle: "Fox Series",
+        description: "An engineer installs himself in a prison he helped design, in order to save his falsely accused brother.",
         genre: "Action, Crime, Drama",
         year: 2005,
         duration: "5 Seasons",
-        starring: "Wentworth Miller, Dominic Purcell, Sarah Wayne Callies",
+        starring: "Wentworth Miller, Dominic Purcell",
         director: "Paul Scheuring",
         rating: 7.3,
+        image: prisonbreak,
         backgroundImage: prisonbreak,
-        thumbnail: prisonbreak,
-        image: prisonbreak
+        episodes: [
+            {
+                id: 1,
+                title: "Pilot",
+                description: "Michael Scofield commits an armed robbery to get sent to the prison where his brother is on death row.",
+                duration: "44 min",
+                date: "August 29, 2005"
+            }
+        ]
     },
     {
-        id: 'series-5',
+        id: 5,
         title: "The Boys",
-        description: "A group of vigilantes takes on corrupt superheroes who abuse their superpowers and are owned by a powerful corporation.",
-        genre: "Action, Crime, Drama",
+        subtitle: "Prime Series",
+        description: "A group of vigilantes take on corrupt superheroes who abuse their superpowers.",
+        genre: "Action, Comedy, Crime",
         year: 2019,
         duration: "3 Seasons",
-        starring: "Karl Urban, Jack Quaid, Antony Starr",
+        starring: "Karl Urban, Jack Quaid",
         director: "Eric Kripke",
         rating: 9.0,
+        image: theboys,
         backgroundImage: theboys,
-        thumbnail: theboys,
-        image: theboys
+        episodes: [
+            {
+                id: 1,
+                title: "The Name of the Game",
+                description: "When Hughie suffers a devastating loss at the hands of a Supe, he joins The Boys.",
+                duration: "60 min",
+                date: "July 26, 2019"
+            }
+        ]
     },
     {
-        id: 'series-6',
+        id: 6,
         title: "The Night Agent",
+        subtitle: "Netflix Series",
         description: "A low-level FBI agent works in the White House basement monitoring an emergency phone line for night agents.",
         genre: "Action, Drama, Thriller",
         year: 2023,
         duration: "1 Season",
-        starring: "Gabriel Basso, Luciane Buchanan, Sarah Desjardins",
+        starring: "Gabriel Basso, Luciane Buchanan",
         director: "Shawn Ryan",
         rating: 10.0,
+        image: thenightagent,
         backgroundImage: thenightagent,
-        thumbnail: thenightagent,
-        image: thenightagent
+        episodes: [
+            {
+                id: 1,
+                title: "Night Action",
+                description: "FBI Agent Peter Sutherland is assigned to work the night shift.",
+                duration: "55 min",
+                date: "March 23, 2023"
+            }
+        ]
     },
     {
-        id: 'series-7',
+        id: 7,
         title: "The Terminal List",
-        description: "A former Navy SEAL officer investigates why his entire platoon was ambushed during a high-stakes covert mission.",
+        subtitle: "Prime Series",
+        description: "A former Navy SEAL officer investigates why his entire platoon was ambushed during a covert mission.",
         genre: "Action, Drama, Thriller",
         year: 2022,
         duration: "1 Season",
-        starring: "Chris Pratt, Constance Wu, Taylor Kitsch",
+        starring: "Chris Pratt, Constance Wu",
         director: "David DiGilio",
         rating: 7.3,
+        image: theterminallist,
         backgroundImage: theterminallist,
-        thumbnail: theterminallist,
-        image: theterminallist
+        episodes: [
+            {
+                id: 1,
+                title: "The Engram",
+                description: "Navy SEAL Commander James Reece returns home after his entire platoon is ambushed.",
+                duration: "52 min",
+                date: "July 1, 2022"
+            }
+        ]
     },
     {
-        id: 'series-8',
+        id: 8,
         title: "WandaVision",
-        description: "Blending classic television with the Marvel Cinematic Universe, Wanda Maximoff and Vision live idealized suburban lives but begin to suspect everything is not as it seems.",
+        subtitle: "Marvel Series",
+        description: "Wanda Maximoff and Vision live idealized suburban lives, but begin to suspect everything is not as it seems.",
         genre: "Action, Comedy, Drama",
         year: 2021,
         duration: "1 Season",
-        starring: "Elizabeth Olsen, Paul Bettany, Kathryn Hahn",
-        director: "Jac Schaeffer",
+        starring: "Elizabeth Olsen, Paul Bettany",
+        director: "Matt Shakman",
         rating: 7.6,
+        image: wandavision,
         backgroundImage: wandavision,
-        thumbnail: wandavision,
-        image: wandavision
+        episodes: [
+            {
+                id: 1,
+                title: "Filmed Before a Live Studio Audience",
+                description: "Wanda and Vision move into their new home in the suburban town of Westview.",
+                duration: "29 min",
+                date: "January 15, 2021"
+            }
+        ]
     }
 ];
 export const romanceMovies = [
