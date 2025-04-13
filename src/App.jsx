@@ -13,6 +13,7 @@ import { ActionSeries } from "./pages/ActionSeries.jsx";
 import RomancePage from "./pages/RomancePage.jsx";
 import { RomanceSeries } from "./pages/RomanceSeries.jsx";
 import MovieDetails from "./Components/Watch_movie.jsx";
+import SeriesPage from "./Components/Series_page";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/action/series" element={<ActionSeries />} />
           <Route path="/romance" element={<RomancePage />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/series/:id" element={<SeriesPage />} />
           <Route path="/romance/series" element={<RomanceSeries />} />
           {/* Add more routes as needed */}
         </Routes>

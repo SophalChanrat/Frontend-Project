@@ -4,12 +4,16 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Movie_row.css";
 
-export function Movie_row({ title, movies }) {
+export function Movie_row({ title, movies, type="movie" }) {
   const scrollContainerRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleMovieClick = (movie) => {
-    navigate(`/movie/${movie.id}`, { state: { movie } }); // 👈 Navigate to MovieDetails
+  const handleItemClick = (item) => {
+    if (type === "series") {
+      navigate(`/series/${item.id}`, { state: { seriesData: item } });
+    } else {
+      navigate(`/movie/${item.id}`, { state: { movie: item } });
+    }
   };
   const scrollRight = () => {
     if (scrollContainerRef.current) {
@@ -43,7 +47,7 @@ export function Movie_row({ title, movies }) {
             <div key={movie.id} className="movie-card">
               <div
                 key={movie.id}
-                onClick={() => handleMovieClick(movie)}
+                onClick={() => handleItemClick(item)}
                 className="movie-poster"
                 style={{cursor: "pointer"}}
                >
