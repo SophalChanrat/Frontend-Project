@@ -2,6 +2,13 @@
 
 Movie streaming website is a website where users can freely watch any movie available on our website with 2 types of streaming such as movie and series. There are also subscriptions for users to enjoy watching with ads free 
 
+## Key Feeatures
+1. User log in and sign up
+2. Categories of movies and series
+3. Watch small clips of the movie
+4. Settings: change username, change email, change password, change plan
+5. Watchlists
+
 ## Components
 1. Navigation bar
 2. Sign up
