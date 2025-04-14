@@ -8,7 +8,7 @@ export const Plan_card = ({ title, duration, icon, features, selected, onClick, 
       >
         <h3>{title}</h3>
         {duration && <p className="duration">{duration} - {price}</p>}
-        <div className="icon">{icon}</div>
+        <div className="icon-plan">{icon}</div>
         <ul>
           {features.map((feat, i) => (
             <li key={i}>{feat}</li>
